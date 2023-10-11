@@ -39,11 +39,11 @@
     --global-selection-backgroundColor: var(--global-color-primary-100);
 
     /* forms */
-    --global-placeholder-color: var(--global-color-neutral-400);
+    --global-placeholder-color: var(--global-color-neutral-500);
 
     /* borders */
     --global-borderWidth: 1px;
-    --global-borderColor: var(--global-color-neutral-100);
+    --global-borderColor: black;
 
     /* transitions */
     --global-transitionDuration-alpha: 0.2s;
@@ -67,14 +67,16 @@
     --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
     /*  = 72px */
 
-    /* forms */
+    --global-placeholder-color: var(--global-color-primary-200);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --global-page-color: var(--global-color-neutral-050);
         --global-page-backgroundColor: var(--global-color-neutral-900);
+        --global-borderColor:var(--global-color-neutral-100);
     }
+    
 }
 
 /*------------------------------------*\
@@ -492,7 +494,8 @@ input::placeholder {
     Accessibly hide any element
 */
 
-.o-hide-accessible {
+.
+o-hide-accessible {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -507,7 +510,68 @@ input::placeholder {
 #COMPONENTS
 \*------------------------------------*/
 
+.c-app{}
 
+.c-app__joke-wrapper{
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.c-title{
+    margin-bottom: 4rem;
+}
+
+.c-joke{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.c-loading{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+}
+
+.c-loading__placeholder{
+    display: block;
+    width: 25vh;
+    height: 4rem;
+    border-radius: 0.5rem;
+    background-color: var(--global-placeholder-color);
+}
+
+.c-loading__placeholder--full{
+    width: 100vh;
+}
+
+.c-loading__placeholder--half{
+    width: 50vh;
+}
+
+.c-joke-button{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--global-color-primary-500);
+    border: none;
+    color: var(--global-color-neutral-100);
+    font-weight: bold;
+}
+
+.c-footer{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: var(--global-borderWidth) solid var(--global-borderColor);
+    bottom: 0;
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -518,6 +582,10 @@ input::placeholder {
     ---
     Utility classes to put specific colors onto elements
 */
+
+.u-hidden{
+    display: none;
+}
 
 .u-color-neutral-500 {
     color: var(--global-color-neutral-500);
