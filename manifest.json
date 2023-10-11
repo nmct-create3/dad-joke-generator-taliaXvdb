@@ -1,0 +1,13 @@
+{
+    "name": "MCT Dad Jokes",
+    "short_name": "Dad Jokes",
+    "icons": [
+        {
+            "src": "google-touch-icon.png",
+            "sizes": "512x512"
+        }
+    ],
+    "theme_color": "#44c8f5",
+    "background_color": "#44c8f5",
+    "display": "standalone"
+}
